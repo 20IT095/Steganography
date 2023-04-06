@@ -16,16 +16,16 @@ LSB Method in image stegnography
 
 ![image](https://user-images.githubusercontent.com/88429482/230294303-51036307-9478-47c8-adc3-de9baeb742b3.png)
 
-In a gray scale image each pixel is represented in 8 bits. The last bit in a pixel is called as Least Significant bit as its
-value will affect the pixel value only by “1”. So, this property is used to hide the data in the image. If anyone have
-considered last two bits as LSB bits as they will affect the pixel value only by “3”. This helps in storing extra data.
-The Least Significant Bit (LSB) steganography is one such technique in which least significant bit of the image is
-replaced with data bit. As this method is vulnerable to steganalysis so as to make it more secure we encrypt the raw
-data before embedding it in the image. Though the encryption process increases the time complexity, but at the same
-time provides higher security also. This approach is very simple. In this method the least significant bits of some or
-all of the bytes inside an image is replaced with a bits of the secret message. The LSB embedding approach has
-become the basis of many techniques that hide messages within multimedia carrier data. LSB embedding may even
-be applied in particular data domains – for example, embedding a hidden message into the color values of RGB
-bitmap data, or into the frequency coefficients of a JPEG image. LSB embedding can also be applied to a variety of
-data formats and types. Therefore, LSB embedding is one of the most important steganography techniques in use
-today. 
+In image steganography using the LSB (Least Significant Bit) algorithm, secret information is hidden in the least significant bits of the pixels in an image.
+
+The LSB algorithm works by replacing the least significant bit of each pixel with a bit from the secret message. Since the least significant bit of a pixel has the least impact on the overall image quality, changing it does not significantly alter the appearance of the image to the human eye.
+
+The process of hiding the secret message in an image using the LSB algorithm involves the following steps:
+
+Convert the secret message into binary form.
+Choose a cover image that will be used to hide the secret message.
+Divide the cover image into small blocks of pixels.
+For each block of pixels, replace the least significant bit of each pixel with a bit from the secret message.
+Repeat step 4 until all bits of the secret message have been hidden in the cover image.
+Save the stego image, which is the cover image with the hidden secret message.
+To extract the secret message from the stego image, the LSB algorithm is reversed by extracting the least significant bit of each pixel in the stego image to obtain the binary message.
